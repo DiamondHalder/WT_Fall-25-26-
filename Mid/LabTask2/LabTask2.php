@@ -6,9 +6,22 @@
     </head>
      <body>
         <h1 align="center">Participant Registration</h1>
-        Full Name:
-        <input type="text" id="name">
+        <div>
+           Full Name:
+           <input type="text" id="name">
+            Email:
+            <input type="text" id="email">
+            Phone Number:
+            <input type="number" id="number">
+            Password:
+            <input type="password" id="password">
+            Confirm Password:
+            <input type="password" id="cpassword">
+            <button type="submit">Register </button>
+            
+        </div>
         
+
 
      </body>
     <style>
