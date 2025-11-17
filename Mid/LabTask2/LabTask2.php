@@ -71,7 +71,7 @@
         let cpass=document.getElementById("cpassword").value.trim();
 
         let errorDiv=document.getElementById("error");
-        let errorDiv=document.getElementById("output");
+        let outputDiv=document.getElementById("output");
 
         if(name===""|| email===""|| number===""|| pass===""|| cpass==="")
         {
@@ -82,6 +82,19 @@
             errorDiv.innerHTML="Invalid Email";
             return false;
         }
+        if(pass !== cpass)
+        {
+             errorDiv.innerHTML="Incorrect Password";
+            return false;
+        }
+
+        outputDiv.innerHTML=`
+        <b>Registration Successful</b>
+        Name: ${name}<br>
+        Email: ${email}<br>
+        Phone: ${number}
+
+        `; 
     }
     </script>
     
