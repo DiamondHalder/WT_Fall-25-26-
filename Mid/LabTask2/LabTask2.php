@@ -69,6 +69,19 @@
         let number=document.getElementById("number").value.trim();
         let pass=document.getElementById("password").value.trim();
         let cpass=document.getElementById("cpassword").value.trim();
+
+        let errorDiv=document.getElementById("error");
+        let errorDiv=document.getElementById("output");
+
+        if(name===""|| email===""|| number===""|| pass===""|| cpass==="")
+        {
+            errorDiv.innerHTML="Please fill the form";
+            return false;
+        }
+        if(!email.includes("@")){
+            errorDiv.innerHTML="Invalid Email";
+            return false;
+        }
     }
     </script>
     
