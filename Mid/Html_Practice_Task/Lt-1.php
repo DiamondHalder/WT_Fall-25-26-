@@ -9,8 +9,8 @@
         <nav>
             <ul>
                 <li><a href="#bio">Biography</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="education.html" target="_blank">Education</a></li>
+                <li><a href="#" id="contactbtn">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -18,9 +18,13 @@
     <main>
         <section id="bio">
             <h2>About Me</h2>
-            <p>Biography</p>
+            <img src="your-photo.jpg" alt="Diamond Halder">
+            <p>I am Diamond Halder currently studing at AIUB</p>
             
         </section>
+
+    </main>    
+
         <section id="education">
             <h2>Education</h2>
             <table>
@@ -54,19 +58,84 @@
 
         </section>
 
-        <section id="contact">
+        
+        <div id="overlay"></div>
+        <div id="contactpopup">
             <h3>Contact Me</h2>
             <form action="#" method="post">
-                Email:
-                <input type="email" id="email" name="email">
-                Message:
-                <textarea name="message" id="message"></textarea>
+                <label for="email">Email:</label> 
+                <input type="email" id="email" name="email"><br><br>
+                <label for="message">Message:</label> <br>
+                <textarea name="message" id="message"></textarea><br><br>
                 <button type="submit">Send</button>
             </form>
-
-        </section>
+            <button class="close">Close</button>
+        </div>
         <footer>
             <P>&copy; 2025 Diamond Halder. All Rights Reserved</P>
         </footer>
-    </main>
+   
+
+    <style>
+        header{
+            position: fixed;
+            top: 0;
+            left:0 ;
+            width: 100%;
+            background-color:aliceblue;
+            color:cornsilk;
+            padding: 10px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            font-width:bold;
+        }
+
+        main{
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        #bio img {
+            max-width: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        #contactpopup{
+            display: none;
+            position: fixed;
+            top: auto;
+            left: auto;
+            background-color:aqua;
+            border: 2 px solid blue;
+            padding: 20px;
+            z-index: 1001;
+        }
+        #contactpopup button.close{
+            margin-top: 10px;
+        }
+
+        overlay{
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: auto;
+            height: auto;
+            background:aliceblue;
+            z-index: 1000;
+        }
+    </style>
 </body>
