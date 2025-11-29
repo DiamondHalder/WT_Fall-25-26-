@@ -82,8 +82,9 @@
             top: 0;
             left:0 ;
             width: 100%;
+            height: auto;
             background-color:aliceblue;
-            color:cornsilk;
+            color:black;
             padding: 10px;
             text-align: center;
             z-index: 1000;
@@ -91,6 +92,7 @@
 
         header nav ul {
             list-style: none;
+            color:black;
             margin: 0;
             padding: 0;
             display: flex;
@@ -99,15 +101,17 @@
         }
 
         header nav ul li a {
-            color: white;
+            color:black;
             font-width:bold;
         }
 
         main{
-            margin-top: 100px;
+            margin-top: 120px;
             text-align: center;
         }
-
+        
+        
+        
         #bio img {
             max-width: 200px;
             border-radius: 50%;
@@ -136,6 +140,11 @@
             height: auto;
             background:aliceblue;
             z-index: 1000;
+        }
+        #education{
+            border:2px solid black;
+            
+
         }
     </style>
 
