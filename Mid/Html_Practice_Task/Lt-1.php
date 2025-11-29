@@ -116,8 +116,8 @@
         #contactpopup{
             display: none;
             position: fixed;
-            top: auto;
-            left: auto;
+            top: 100px;
+            left: 100px;
             background-color:aqua;
             border: 2 px solid blue;
             padding: 20px;
@@ -138,4 +138,33 @@
             z-index: 1000;
         }
     </style>
+
+    <script>
+       
+        const contactbtn = document.getElementById('contactbtn');
+        const contactpopup = document.getElementById('contactpopup');
+        const overlay = document.getElementById('overlay');
+        const closebtn = document.querySelector('#contactpopup .close');
+
+
+        contactbtn.addEventListener('click', function(e)
+        {
+            e.preventDefault();
+            contactpopup.style.display = 'block';
+            overlay.style.display = 'block';
+        });
+
+        closebtn.addEventListener('click', function()
+        {
+            contactpopup.style.display = 'none';
+            overlay.style.display = 'none';
+        });
+
+        overlay.addEventListener('click', function()
+        {
+            contactpopup.style.display = 'none';
+            overlay.style.display = 'none';
+        });
+    </script>
+
 </body>
