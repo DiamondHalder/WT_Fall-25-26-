@@ -2,14 +2,18 @@
 <html>
     <head>
         <title>Admin Dashboard</title>
+        <link rel="stylesheet" href="../assets/css/style.css">
     </head>
     <body>
+        <?php include("../includes/header.php"); ?>
+        <div class="container">
+
         <div class="sidebar">
-            <a href="">Dashboard</a>
-            <a href="">Manage Users</a>
-            <a href="">Orders</a>
-            <a href="">Approve Products</a>
-            <a href="">Activity</a>
+            <a href="dashboard.php">Dashboard</a>
+            <a href="manage_users.php">Manage Users</a>
+            <a href="orders.php">Orders</a>
+            <a href="approve_products">Approve Products</a>
+            <a href="activity_log.php">Activity</a>
         </div>
 
         <div class="content">
@@ -34,5 +38,7 @@
             </div>
 
         </div>
+</div>
+        <?php include("../includes/footer.php"); ?>
     </body>
 </html>
