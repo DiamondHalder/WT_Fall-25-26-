@@ -9,14 +9,14 @@
         <link rel="stylesheet" href="../assets/css/style.css">
     </head>
     <body>
-        <?php include("../include/header/php"); ?>
+        <?php include("../includes/header.php"); ?>
 
         <div class="container">
             <div class="sidebar">
             <a href="dashboard.php">Dashboard</a>
             <a href="manage_users.php">Manage Users</a>
             <a href="orders.php">Orders</a>
-            <a href="approve_products">Approve Products</a>
+            <a href="approve_products.php">Approve Products</a>
             <a href="activity_log.php">Activity</a>
             </div>
 
@@ -113,6 +113,6 @@
             </div>
 
         </div>
-        <?php include("../include/footer.php"); ?>
+        <?php include("../includes/footer.php"); ?>
     </body>
 </html>
