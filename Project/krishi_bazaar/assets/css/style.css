@@ -3,11 +3,15 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    
+    
 }
 
 body{
     background: url("../images/background.jpg") no-repeat center center fixed;
     background-size: cover;
+   
+    
     
 
 }
@@ -42,6 +46,7 @@ body{
     display: flex;
     min-height: 100vh;
     background: rgba(210, 209, 209, 0.498);
+    
 
 }
 
