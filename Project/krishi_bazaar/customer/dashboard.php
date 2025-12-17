@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        
-        <?php include("../includes/head.php"); ?>
-       
-    </head>
-    <body>
-        <?php include("../includes/header.php"); ?>
 
-        <div class="container">
+<head>
+
+    <?php include("../includes/head.php"); ?>
+
+</head>
+
+<body>
+    <?php include("../includes/header.php"); ?>
+
+    <div class="container">
 
         <div class="sidebar">
             <a href="dashboard.php">Dashboard</a>
@@ -41,11 +43,16 @@
                     <p>---</p>
 
                 </div>
-                
+
             </div>
 
 
         </div>
-       
-    </body>
+
+    </div>
+
+    <?php include("../includes/footer.php"); ?>
+
+</body>
+
 </html>

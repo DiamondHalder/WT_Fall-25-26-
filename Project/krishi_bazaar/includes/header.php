@@ -3,7 +3,7 @@
 <div class="navbar">
     <div class="nav-left">
         <img src="../assets/images/plogo.png" alt="Krishi Bazaar Logo">
-        <strong>Krishi Bazaar - Admin Panel</strong>
+        <strong>Krishi Bazaar</strong>
     </div>
     <div>
         <a href="profile.php">Profile</a>
