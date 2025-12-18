@@ -28,7 +28,7 @@
            if($_SERVER["REQUEST_METHOD"]=="POST"){
             if(isset($_POST['cancel_order'])){
                 $order_id = $_POST['order_id'];
-                echo "<p style='color:red; margin:5px;'>Order ID $order_id has been cancelled.</p>";
+                echo "<p style='color:red; margin:8px;'>Order ID $order_id has been cancelled.</p>";
 
             }
            }
