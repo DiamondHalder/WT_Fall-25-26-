@@ -30,10 +30,11 @@
            if($_SERVER["REQUEST_METHOD"]=="POST"){
             if(isset($_POST['add_to_cart'])){
                 $product_id = $_POST['product_id'];
-                echo "<p style='color:green;'>Product ID $product_id added to cart.</p>";
+                echo "<p style='color:white; margin:5px;'>Product ID $product_id added to cart.</p>";
 
             }
            }
+           ?>
 
            <table>
              <tr>
@@ -50,28 +51,46 @@
                 <td>Diamond</td>
                 <td>৳50/kg</td>
                 <td>100</td>
-                <td></td>
+                <td>
+                 <form method="post">
+                    <input type="hidden" name="product_id" value="201">
+                    <input type="submit" name="add_to_cart" value="Add to Cart">
+                 </form>
+                </td>
              </tr>
+
              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>202</td>
+                <td>Potato</td>
+                <td>Rifat</td>
+                <td>৳30/kg</td>
+                <td>200</td>
+                <td>
+                 <form method="post">
+                    <input type="hidden" name="product_id" value="202">
+                    <input type="submit" name="add_to_cart" value="Add to Cart">
+                 </form>
+                </td>
              </tr>
+
              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>203</td>
+                <td>Onion</td>
+                <td>Diamond</td>
+                <td>৳60/kg</td>
+                <td>150</td>
+                <td>
+                 <form method="post">
+                    <input type="hidden" name="product_id" value="203">
+                    <input type="submit" name="add_to_cart" value="Add to Cart">
+                 </form>
+                </td>
              </tr>
+             
            </table>
             
            
-            ?>
+            
 
         </div>
 
