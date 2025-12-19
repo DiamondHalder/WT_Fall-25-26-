@@ -152,6 +152,22 @@ table tr:nth-child(even & odd){
     color: white;
 }
 
+.profile-form input,
+.profile-form textarea,
+.profile-form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #cdcdcd;
+    background: white;
+}
+
+.profile-form textarea {
+    resize:none;
+}
+
+
 .footer{
     background: green;
     color: white;
