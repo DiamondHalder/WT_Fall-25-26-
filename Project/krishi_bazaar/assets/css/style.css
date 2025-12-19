@@ -54,7 +54,7 @@ body{
 
 .container{
     display: flex;
-    min-height: 100vh;
+    min-height:83vh;
     background: rgba(210, 209, 209, 0.498);
     
 
@@ -130,13 +130,17 @@ table td{
     color: rgb(0, 0, 0);
 }
 
-table tr:nth-child(even & odd){
-    background: rgb(255, 255, 255);
+table tr:nth-child(odd){
+    background: rgb(255, 255, 255, 0.4);
+}
+table tr:nth-child(even){
+    background: rgb(255, 255, 255, 0.2);
 }
 
 
 .profile-box{
     max-width: 500px;
+    max-height: fit-content;
     margin: 0 auto;
     margin-top: 10px;
     padding: 25px;
@@ -153,7 +157,7 @@ table tr:nth-child(even & odd){
     color: white;
 }
 
-profile-grid {
+.profile-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -192,5 +196,5 @@ profile-grid {
     color: white;
     text-align: center;
     padding: 10px;
-    margin-top: 20px;
+    margin-top: auto;
 }

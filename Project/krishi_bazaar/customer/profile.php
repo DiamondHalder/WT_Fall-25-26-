@@ -26,8 +26,8 @@
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $name = trim($_POST["name"]);
                 $email = trim($_POST["email"]);
-                $age = ($_POST["age"]);
-                $gender = trim($_POST["gender"]);
+                $age = trim($_POST["age"]);
+                $gender = ($_POST["gender"]);
                 $phone = trim($_POST["phone"]);
                 $address = trim($_POST["address"]);
 
@@ -36,7 +36,7 @@
                 } elseif (!is_numeric($age) || $age < 1) {
                     echo "<p style='color:red;'>Please Enter a Valid Age.</p>";
                 } else {
-                    echo "<p style='color:green;'>Profile updated successfull</p>";
+                    echo "<p style='color:green;'>Profile updated successfully</p>";
                 }
             }
             ?>
@@ -69,7 +69,7 @@
                         <textarea name="address">Dhaka</textarea>
                     </div>
                 </div>
-                <button type="submit" value="Update Profie">Update Profile</button>
+                <button type="submit" >Update Profile</button>
             </form>
 
 

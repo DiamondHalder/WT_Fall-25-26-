@@ -1,4 +1,4 @@
-/* php session */
+
 
 <div class="navbar">
     <div class="nav-left">
