@@ -22,26 +22,17 @@
         </div>
 
         <div class="content">
-            <h2>Add Product</h2><br>
-            <div class="card-container">
-                <div class="card">
-                    <h3>Total Orders</h3>
-                    <p>---</p>
+            <h2>Add New Product</h2><br>
 
-                </div>
-                <div class="card">
-                    <h3>Pending Orders</h3>
-                    <p>---</p>
-
-                </div>
-                <div class="card">
-                    <h3>Total Sales</h3>
-                    <p>---</p>
-
-                </div>
-                
-
-            </div>
+            <?php
+            if($_SERVER["REQUEST_METHOD"]=="POST"){
+                $name=trim($_POST["name"]);
+                $category=trim($_POST["category"]);
+                $price=trim($_POST["price"]);
+                $quantity=trim($_POST["quantity"]);
+                $description=trim($_POST["description"]);
+            } 
+             ?>
 
 
         </div>
