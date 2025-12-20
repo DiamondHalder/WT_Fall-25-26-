@@ -31,6 +31,16 @@
                 $price=trim($_POST["price"]);
                 $quantity=trim($_POST["quantity"]);
                 $description=trim($_POST["description"]);
+
+                if($name=="" || $category=="" || $price=="" || $quantity=="" || $description=="" ){
+                    echo "<p style='color:red;'>All fields are required.</p>";
+                }elseif (!is_numeric($price) || $price<=0){
+                    echo "<p style='color:red;'>Enter a valid price.</p>";
+                }elseif (!is_numeric($quantity) || $quantity<1){
+                    echo "<p style='color:red;'>Enter a valid quantity.</p>";
+                }else {
+                    echo "<p style='color:green;'>Product added successfully.</p>";
+                }
             } 
              ?>
 
