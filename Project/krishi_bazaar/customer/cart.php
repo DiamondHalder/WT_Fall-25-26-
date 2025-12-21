@@ -37,24 +37,28 @@
                 echo "<p style='color:white; margin:8px;'>Quantity updated to $qty.</p>";
 
             }
+            if(isset($_POST['checkout'])){
+              echo "<p style='color:green; margin:8px;'>Order placed successfully.</p>";  
+            }
            }
            ?>
 
            <table>
              <tr>               
-                <th>Product</td>
-                <th>Price</td>
-                <th>Quantity </td>
-                <th>Subtotal</td>
-                <th>Action</td>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity </th>
+                <th>Subtotal</th>
+                <th>Action</th>
              </tr>
              <tr>
                 <td>Rice</td>
                 <td>৳50</td>
                 <td>
                     <form method="post" style="display: inline;">
+                        <input type="hidden" name="product_id" value="201">
                         <input type="number" name="quantity" value="5" min="1" style="width: 60px;">
-                        <input type="submit" name="update_qty" value="update"">
+                        <input type="submit" name="update_qty" value="update">
                     </form>
                 </td>
                 <td>৳250</td>
@@ -63,6 +67,7 @@
                  <form method="post">
                     <input type="hidden" name="product_id" value="201">
                     <input type="submit" name="remove" value="Remove">
+                    
                  </form>
                 </td>
              </tr>
@@ -73,8 +78,10 @@
                 <td>৳30</td>
                 <td>
                     <form method="post" style="display: inline;">
+                        <input type="hidden" name="product_id" value="202">
                        <input type="number" name="quantity" value="10" min="1" style="width: 60px;">
-                        <input type="submit" name="update_qty" value="update""> 
+                        <input type="submit" name="update_qty" value="update"> 
+
                     </form>
                 </td>
                 <td>৳300</td>
@@ -92,8 +99,9 @@
 
            <br><h3>Total Amount:৳500</h3><br>
 
-           <form >
-            <input type="submit" value="Proceed to Checkout" >
+           <form method="post">
+            <input type="submit" name="checkout" value="Proceed to Checkout" >
+            
             <small></small>
            </form>
             
