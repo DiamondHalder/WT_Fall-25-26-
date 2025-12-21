@@ -68,20 +68,32 @@
                     </td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>302</td>
+                    <td>Potato</td>
+                    <td>৳30/kg</td>
+                    <td>200</td>
+                    <td style="color:green;">Approved</td>
+                    <td>
+                        <form method="post" style="display: inline;">
+                            <input type="hidden" name="product_id" value="302">
+                            <input type="submit" name="edit_product" value="Edit">
+                        </form>
+
+                         <form method="post" style="display: inline;">
+                            <input type="hidden" name="product_id" value="302">
+                            <input type="submit" name="delete_product" value="Delete">
+                        </form>
+                    </td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>303</td>
+                    <td>Onion</td>
+                    <td>৳60/kg</td>
+                    <td>0</td>
+                    <td style="color:red;">Rejected</td>
+                    <td>
+                        <em>No Action</em>
+                    </td>
                 </tr>
             </table>
              
