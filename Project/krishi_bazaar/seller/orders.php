@@ -15,9 +15,14 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
                 $order['status']='shipped';
                 $message="Order Id $order_id confirmed and sipped.";
 
-            }elseif (isset($_POST))
+            }elseif (isset($_POST['decline'])){
+                $order['status']='none';
+                $message="Order Id $order_id declined.";
+            }
+            break;
         }
     }
+    unset($order);
 }
 ?>
 
@@ -48,25 +53,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             <h2>Customer Orders</h2><br>
 
             <?php
-            if($_SERVER["REQUEST_METHOD"]=="POST"){
+            
                 
-                if(isset($_POST['accept'])){
-                    $order_id=$_POST['order_id'];
-                    echo "<p style='color:green; margin:8px; '>Order Id $order_id accepted.</p>";
-                }
-
-                 if(isset($_POST['ship'])){
-                    $order_id=$_POST['order_id'];
-                    echo "<p style='color:orange; margin:8px; '>Order Id $order_id shipped.</p>";
-                }
-
-                 if(isset($_POST['deliver'])){
-                    $order_id=$_POST['order_id'];
-                    echo "<p style='color:green; margin:8px; '>Order Id $order_id delivered.</p>";
-                }
-                
-            } 
-             ?>
+                if(isset($message)) echo "<p style='color:green; margin:8px; '>$message</p>"; ?>
 
             <table>
                 <tr>
