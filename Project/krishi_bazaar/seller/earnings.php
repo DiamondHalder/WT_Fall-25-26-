@@ -33,6 +33,7 @@ foreach($orders as $e){
             <a href="add_product.php">Add Product</a>
             <a href="my_products.php">My Products</a>
             <a href="orders.php">Orders</a>
+            <a href="earnings.php">Seller Earnings</a>
             <a href="profile.php">Profile</a>
         </div>
 
@@ -59,14 +60,15 @@ foreach($orders as $e){
                     <td>৳<?= $e['total'] ?></td>
                 </tr>
                 <?php endforeach; ?>
+                <tr class="total-row">
+                    <td colspan="4">Total Earnings</td>
+                    <td>৳<?= $total_earnings ?></td>
 
-                
-
-                
+                </tr>                
             </table>
             <?php else: ?>
                 <p>No Earnings Yet.</p>
-                <?php endif?>
+                <?php endif; ?>
              
 
 
