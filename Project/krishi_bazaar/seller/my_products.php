@@ -15,7 +15,7 @@
 
         <div class="sidebar">
             <a href="dashboard.php">Dashboard</a>
-            <a href="add_product.php"></a>
+            <a href="add_product.php">Add Product</a>
             <a href="my_products.php">My Products</a>
             <a href="orders.php">Orders</a>
             <a href="profile.php">Profile</a>
