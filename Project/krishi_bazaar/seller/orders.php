@@ -16,7 +16,7 @@
         <div class="sidebar">
             <a href="dashboard.php">Dashboard</a>
             <a href="add_product.php">Add Product</a>
-            <a href="my_product.php">My Products</a>
+            <a href="my_products.php">My Products</a>
             <a href="orders.php">Orders</a>
             <a href="profile.php">Profile</a>
         </div>
@@ -39,7 +39,7 @@
 
                  if(isset($_POST['deliver'])){
                     $order_id=$_POST['order_id'];
-                    echo "<p style='color:orange; margin:8px; '>Order Id $order_id delivered.</p>";
+                    echo "<p style='color:green; margin:8px; '>Order Id $order_id delivered.</p>";
                 }
                 
             } 
@@ -61,7 +61,7 @@
                     <td>Rice</td>
                     <td>5</td>
                     <td>৳250</td>
-                    <td>Pending</td>
+                    <td style="color: orange;">Pending</td>
                     
                     <td>
                         <form method="post" style="display: inline;">
