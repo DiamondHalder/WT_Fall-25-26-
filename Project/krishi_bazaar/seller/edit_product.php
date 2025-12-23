@@ -22,7 +22,7 @@
             <a href="profile.php">Profile</a>
         </div>
 
-        <div class="content">
+        <div class="profile-box">
             <h2>Edit Product</h2><br>
 
             <?php
@@ -34,7 +34,8 @@
             } 
              ?>
 
-            <form method="post">
+            <form method="post" class="profile-form">
+
                 <label>Product Name</label>
                 <input type="text" name="name" value="Rice">
 
