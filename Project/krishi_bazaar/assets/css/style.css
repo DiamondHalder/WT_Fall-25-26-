@@ -192,7 +192,23 @@ table tr:nth-child(even){
 .profile-form button:hover{
     background:  #d2e9dc;
 }
+
+.profile-box_2 {
+    max-width: 500px;
+    max-height: fit-content;
+    min-height: 465px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.315);
+    backdrop-filter: blur(6px);
+    border-radius: 12px;
+    box-shadow: 0 0 10px 6px rgba(5, 228, 1, 0.68);
+}
+
 .footer{
+    bottom: 0;
     background: green;
     color: white;
     text-align: center;
