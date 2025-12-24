@@ -1,19 +1,33 @@
 <?php
-$error="";
+$error = "";
 
-if($_SERVER["REQUEST_METHOD"]=="POST"){
-    $role=$_POST['role'] ?? '';
-    $email=trim($_POST['email'] ?? '');
-    $password=trim($_POST['password'] ?? '');
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $role = $_POST['role'] ?? '';
+    $email = trim($_POST['email'] ?? '');
+    $password = trim($_POST['password'] ?? '');
 
-    if($role=="" || $email=="" || $password==""){
-        $error="All fields are required.";
-    }elseif (!filter_var($email,FILTER_VALIDATE_EMAIL)){
-        $error="Invalid eamil format.";
-    }
-    else{
-        if($role === "admin"){
-            if
+    if ($role == "" || $email == "" || $password == "") {
+        $error = "All fields are required.";
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $error = "Invalid eamil format.";
+    } else {
+        if ($role === "admin") {
+            if ($email === "admin@krishibazar.com" && $password === "1234") {
+                header("Location: ../admin/dashboard.php");
+                exit;
+            } else {
+                $error = "Invalid admin credentials.";
+            }
+        }
+
+        if ($role === "seller" || $role === "customer") {
+            if ($role === "seller") {
+                header("Location: ../seller/dashboard.php");
+                exit;
+            } else {
+                header("Location: ../customer/dashboard.php");
+                exit;
+            }
         }
     }
 }
@@ -22,59 +36,62 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <?php include("../includes/head.php"); ?>
-    </head>
-    <body>
-        <?php include("../includes/header.php"); ?>
 
-        <div class="container">
-            <div class="content">
-                <h2>Login</h2>
+<head>
+    <?php include("../includes/head.php"); ?>
+</head>
 
-                <?php if ($error): ?>
-                    <p style="color:red;"><?= $error ?>></p>
-                    <?php endif; ?>
+<body>
+    <?php include("../includes/header.php"); ?>
 
-                    <form method="post">
-                        <label>User Type</label>
-                        <select name="role" id="role" onchange="toggleRegister()" required>
-                            <option value="">Select</option>
-                            <option value="admin">Admin</option>
-                            <option value="customer">Customer</option>
-                            <option value="seller">Seller</option>
-                        </select>
+    <div class="container">
+        <div class="content">
+            <h2>Login</h2>
 
-                        <label>Email</label>
-                        <input type="email" name="email" required>
+            <?php if ($error): ?>
+                <p style="color:red;"><?= $error ?>></p>
+            <?php endif; ?>
 
-                        <label>Password</label>
-                        <input type="password" name="password" required>
+            <form method="post">
+                <label>User Type</label>
+                <select name="role" id="role" onchange="toggleRegister()" required>
+                    <option value="">Select</option>
+                    <option value="admin">Admin</option>
+                    <option value="customer">Customer</option>
+                    <option value="seller">Seller</option>
+                </select>
 
-                        <button type="submit">Login</button>
+                <label>Email</label>
+                <input type="email" name="email" required>
 
-                        <p id="registerLink" style="display: none; margin-top:10px;">
-                            Don't have an accout?
-                            <a href="register.php">Register here</a>
-                        </p>
-                    </form>
+                <label>Password</label>
+                <input type="password" name="password" required>
 
-            </div>
+                <button type="submit">Login</button>
+
+                <p id="registerLink" style="display: none; margin-top:10px;">
+                    Don't have an accout?
+                    <a href="register.php">Register here</a>
+                </p>
+            </form>
 
         </div>
 
-        <script>
-            function toggleRegister(){
-                let role=document.getElementById("role").value;
-                let link= document.getElementById("registerLink");
+    </div>
 
-                if (role ==="seller" || role === "customer"){
-                    link.style.display="block";
-                }else{
-                    link.style.display="block";
-                }
+    <script>
+        function toggleRegister() {
+            let role = document.getElementById("role").value;
+            let link = document.getElementById("registerLink");
+
+            if (role === "seller" || role === "customer") {
+                link.style.display = "block";
+            } else {
+                link.style.display = "block";
             }
-        </script>
-        <?php include("../includes/footer.php"); ?>
-    </body>
+        }
+    </script>
+    <?php include("../includes/footer.php"); ?>
+</body>
+
 </html>
