@@ -43,8 +43,16 @@
 
         <script>
             function toggleRegister(){
-                
+                let role=document.getElementById("role").value;
+                let link= document.getElementById("registerLink");
+
+                if (role ==="seller" || role === "customer"){
+                    link.style.display="block";
+                }else{
+                    link.style.display="block";
+                }
             }
         </script>
+        <?php include("../includes/footer.php"); ?>
     </body>
 </html>
