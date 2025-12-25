@@ -20,20 +20,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $error = "Invalid phone number.";
         
     }elseif (strlen($password)<6){
-        $error = "";
+        $error = "Password must be at least 6 characters";
+    }elseif($password !=== $confirm){
+        $error = "Password doesn't match.";
+    }else{
+        $success="Registration successful. You can now login.";
     }
 
-        if ($role === "seller" || $role === "customer") {
-            if ($role === "seller") {
-                header("Location: ../seller/dashboard.php");
-                exit;
-            } else {
-                header("Location: ../customer/dashboard.php");
-                exit;
-            }
-        }
-    }
+
+        
 }
+
 ?>
 
 
