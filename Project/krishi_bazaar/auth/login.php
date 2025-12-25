@@ -52,8 +52,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    
 </div>
 
-    <div class="profile-box_2">
-        <div class="content">
+    <div class="container">
+        <div class="profile-box_2">
             <h2>Login</h2>
 
             <?php if ($error): ?>

@@ -143,6 +143,7 @@ table tr:nth-child(even){
     max-height: fit-content;
     margin: 0 auto;
     margin-top: 10px;
+    margin-bottom: 10px;
     padding: 25px;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(6px);
@@ -160,7 +161,7 @@ table tr:nth-child(even){
 .profile-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 7px;
 }
 
 .profile-form input,
@@ -169,7 +170,7 @@ table tr:nth-child(even){
     width: 100%;
     display: block;
     padding: 8px;
-    margin-top: 10px;
+    margin-top: 6.5px;
     border-radius: 5px;
     border: 1px solid #cdcdcd;
     background: white;
@@ -180,7 +181,7 @@ table tr:nth-child(even){
 }
 
 .profile-form button{
-    margin-top: 15px;
+    margin-top: 10px;
     background: white;
     color: rgb(2, 185, 24);
     border: none;
@@ -202,6 +203,20 @@ table tr:nth-child(even){
     margin-bottom: 10px;
     padding: 25px;
     background: rgba(255, 255, 255, 0.315);
+    backdrop-filter: blur(6px);
+    border-radius: 12px;
+    box-shadow: 0 0 10px 6px rgba(5, 228, 1, 0.68);
+}
+
+.profile-box_3{
+    max-width: 500px;
+    max-height: fit-content;
+    min-height: 466px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(6px);
     border-radius: 12px;
     box-shadow: 0 0 10px 6px rgba(5, 228, 1, 0.68);

@@ -77,10 +77,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_profile'])) {
 
                     </div>
 
-</div>
-                    <div style="margin-top:10px;text-align:center;">
+                </div>
+
+                <div style="margin-top:10px;text-align:center;">
                     <button type="submit" name="update_profile" style="width: 100%;">Update Profile</button>
-                    </div>
+                </div>
 
 
             </form>
