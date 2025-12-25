@@ -1,3 +1,9 @@
+<?php 
+require_once("../includes/seller_auth.php");
+include("../includes/header.php"); 
+
+?>
+
 <?php
 $orders= [
 ['order_id'=>501,'customer'=>'Rabbi','product'=>'Rice','quantity'=>5,'total'=>250,'status'=>'pending'],
@@ -37,7 +43,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 </head>
 
 <body>
-    <?php include("../includes/header.php"); ?>
+    
 
     <div class="container">
 

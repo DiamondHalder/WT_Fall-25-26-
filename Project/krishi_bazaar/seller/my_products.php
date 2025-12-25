@@ -1,4 +1,8 @@
+<?php 
+require_once("../includes/seller_auth.php");
+include("../includes/header.php"); 
 
+?>
 <!DOCTYPE html>
 <html>
 
@@ -9,7 +13,7 @@
 </head>
 
 <body>
-    <?php include("../includes/header.php"); ?>
+   
 
     <div class="container">
 

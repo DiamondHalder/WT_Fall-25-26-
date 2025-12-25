@@ -1,3 +1,9 @@
+<?php 
+require_once("../includes/seller_auth.php");
+include("../includes/header.php"); 
+
+?>
+
 <?php
 $seller = [
     'name' => 'Sagor',
@@ -29,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_profile'])) {
 </head>
 
 <body>
-    <?php include("../includes/header.php"); ?>
+    
 
     <div class="container">
 

@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $error = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -13,6 +15,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         if ($role === "admin") {
             if ($email === "admin@krishibazar.com" && $password === "1234") {
+
+                $_SESSION['user_role']='admin';
+                $_SESSION['admin_email']='$email';
+
                 header("Location: ../admin/dashboard.php");
                 exit;
             } else {
@@ -20,15 +26,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
 
-        if ($role === "seller" || $role === "customer") {
+       
             if ($role === "seller") {
+
+                $_SESSION['user_role']='seller';
+                $_SESSION['seller_id']=1;
+                $_SESSION['seller_email']='$email';
                 header("Location: ../seller/dashboard.php");
                 exit;
             } else {
                 header("Location: ../customer/dashboard.php");
                 exit;
             }
-        }
+
+             if ($role === "customer") {
+
+                $_SESSION['user_role']='customer';
+                $_SESSION['customer_id']=1;
+                $_SESSION['customer_email']='$email';
+                
+                header("Location: ../seller/dashboard.php");
+                exit;
+            } else {
+                header("Location: ../customer/dashboard.php");
+                exit;
+            }
+        
     }
 }
 ?>
